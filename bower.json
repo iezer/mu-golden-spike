@@ -1,0 +1,6 @@
+{
+  "name": "golden-spike",
+  "dependencies": {
+    "ember": "components/ember#canary"
+  }
+}
