@@ -35,7 +35,9 @@
     "ember-resolver": "github:201-created/ember-resolver#namespace-in-lookup-string",
     "ember-welcome-page": "^3.0.0",
     "eslint-plugin-ember": "^5.0.0",
-    "loader.js": "^4.2.3"
+    "loader.js": "^4.2.3",
+    "mu-first-post": "github:stonecircle/mu-first-post"
+  },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.1"
