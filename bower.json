@@ -1,6 +1,6 @@
 {
   "name": "golden-spike",
   "dependencies": {
-    "ember": "components/ember#canary"
+    "ember": "github:iezer/ember.js#isaac/namespaced-mu-components"
   }
 }
