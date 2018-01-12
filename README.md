@@ -1,9 +1,18 @@
-# golden-spike
+# MU Golden Spike
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Ember.js module unification golden spike of module-unification app with module-unification addon.
+Addon is https://github.com/stonecircle/mu-first-post.
+
+
 
 ## Prerequisites
+
+**Important prerequisite**
+
+You need to locally build a custom version of ember.js and npm link.
+  * Checkout this branch locally `https://github.com/iezer/ember.js/tree/isaac/namespaced-mu-components`
+  * Inside that repo, run `npm run build` and `npm link`
+  * Inside this `mu-golden-spike` repo, run `npm link ember-source`
 
 You will need the following things properly installed on your computer.
 
