@@ -3,7 +3,7 @@
 Ember.js module unification golden spike of module-unification app with module-unification addon.
 Addon is https://github.com/stonecircle/mu-first-post.
 
-
+![screen shot 2018-01-12 at 11 53 39 am](https://user-images.githubusercontent.com/87991/34886115-0f61e326-f790-11e7-8cc8-169eaff803c3.png)
 
 ## Prerequisites
 
