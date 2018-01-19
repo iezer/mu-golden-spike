@@ -10,7 +10,7 @@ Addon is https://github.com/stonecircle/mu-first-post.
 **Important prerequisite**
 
 You need to locally build a custom version of ember.js and npm link.
-  * Checkout this branch locally `https://github.com/iezer/ember.js/tree/isaac/namespaced-mu-components`
+  * Checkout this branch locally `https://github.com/mixonic/ember.js/tree/rawString`
   * Inside that repo, run `npm run build` and `npm link`
   * Inside this `mu-golden-spike` repo, run `npm link ember-source`
 
