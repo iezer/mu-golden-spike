@@ -5,4 +5,12 @@
 <h1>Welcome to Ember with Module Unification</h1>
 {{mu-first-post buttonPushed=(action 'sayHello')}}
 {{mu-first-post::my-input}}
+
+<p>Service names</p>
+
+<ul>
+  <li><i style="color: red;"></i>Main Service Name: "{{addonMain.name}}"</li>
+  <li>Other Service Name: "{{addonSecondary.name}}"</li>
+</ul>
+
 {{outlet}}
