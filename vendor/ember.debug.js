@@ -6,7 +6,7 @@
  *            Portions Copyright 2008-2011 Apple Inc. All rights reserved.
  * @license   Licensed under MIT license
  *            See https://raw.github.com/emberjs/ember.js/master/LICENSE
- * @version   3.2.0-namespaced-invocation+05c4adae
+ * @version   3.2.0-namespaced-invocation+e4fab05e
  */
 
 /*globals process */
@@ -10412,11 +10412,8 @@ enifed('container', ['exports', 'ember-babel', 'ember-utils', 'ember-debug', 'em
       var normalizedName = this.registry.normalize(fullName);
 
       (true && !(this.registry.isValidFullName(normalizedName)) && (0, _emberDebug.assert)('fullName must be a proper full name', this.registry.isValidFullName(normalizedName)));
+      (true && !(_features.EMBER_MODULE_UNIFICATION || !options.namespace) && (0, _emberDebug.assert)('EMBER_MODULE_UNIFICATION must be enabled to pass a namespace option to factoryFor', _features.EMBER_MODULE_UNIFICATION || !options.namespace));
 
-
-      if (!_features.EMBER_MODULE_UNIFICATION) {
-        (true && !(!options.namespace) && (0, _emberDebug.assert)('EMBER_MODULE_UNIFICATION must be enabled to pass a namespace option to factoryFor', !options.namespace));
-      }
 
       if (options.source || options.namespace) {
         normalizedName = this.registry.expandLocalLookup(fullName, options);
@@ -10471,10 +10468,8 @@ enifed('container', ['exports', 'ember-babel', 'ember-utils', 'ember-debug', 'em
 
   function _lookup(container, fullName) {
     var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+    (true && !(_features.EMBER_MODULE_UNIFICATION || !options.namespace) && (0, _emberDebug.assert)('EMBER_MODULE_UNIFICATION must be enabled to pass a namespace option to lookup', _features.EMBER_MODULE_UNIFICATION || !options.namespace));
 
-    if (!_features.EMBER_MODULE_UNIFICATION) {
-      (true && !(!options.namespace) && (0, _emberDebug.assert)('EMBER_MODULE_UNIFICATION must be enabled to pass a namespace option to lookup', !options.namespace));
-    }
 
     var normalizedName = fullName;
 
@@ -22135,10 +22130,13 @@ enifed('ember-glimmer', ['exports', '@glimmer/runtime', '@glimmer/node', 'ember-
             var owner = meta.owner,
                 moduleName = meta.moduleName;
 
-            var _parseNameForNamespac = this._parseNameForNamespace(_name),
-                name = _parseNameForNamespac.name,
-                namespace = _parseNameForNamespac.namespace;
-
+            var name = _name;
+            var namespace = undefined;
+            if (_features.EMBER_MODULE_UNIFICATION) {
+                var parsed = this._parseNameForNamespace(_name);
+                name = parsed.name;
+                namespace = parsed.namespace;
+            }
             var options = makeOptions(moduleName, namespace);
             var factory = owner.factoryFor('helper:' + name, options) || owner.factoryFor('helper:' + name);
             if (!isHelperFactory(factory)) {
@@ -22187,9 +22185,13 @@ enifed('ember-glimmer', ['exports', '@glimmer/runtime', '@glimmer/node', 'ember-
         };
 
         RuntimeResolver.prototype._lookupComponentDefinition = function _lookupComponentDefinition(_name, meta) {
-            var _parseNameForNamespac2 = this._parseNameForNamespace(_name),
-                name = _parseNameForNamespac2.name,
-                namespace = _parseNameForNamespac2.namespace;
+            var name = _name;
+            var namespace = undefined;
+            if (_features.EMBER_MODULE_UNIFICATION) {
+                var parsed = this._parseNameForNamespace(_name);
+                name = parsed.name;
+                namespace = parsed.namespace;
+            }
 
             var _lookupComponent2 = (0, _emberViews.lookupComponent)(meta.owner, name, makeOptions(meta.moduleName, namespace)),
                 layout = _lookupComponent2.layout,
@@ -47009,7 +47011,7 @@ enifed('ember/index', ['exports', 'require', 'ember-environment', 'node-module',
 enifed("ember/version", ["exports"], function (exports) {
   "use strict";
 
-  exports.default = "3.2.0-namespaced-invocation+05c4adae";
+  exports.default = "3.2.0-namespaced-invocation+e4fab05e";
 });
 enifed("handlebars", ["exports"], function (exports) {
   "use strict";

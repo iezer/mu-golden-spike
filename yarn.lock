@@ -2181,9 +2181,9 @@ ember-cli-version-checker@^2.0.0, ember-cli-version-checker@^2.1.0:
     resolve "^1.3.3"
     semver "^5.3.0"
 
-"ember-cli@github:ember-cli/ember-cli#mu-addons":
+"ember-cli@github:ember-cli/ember-cli#master":
   version "3.1.0-beta.1"
-  resolved "https://codeload.github.com/ember-cli/ember-cli/tar.gz/d15247be6bab8ba6dfe61d719dff0254cfaab63f"
+  resolved "https://codeload.github.com/ember-cli/ember-cli/tar.gz/d4d586c593508b010c6eba65469ba4185909a682"
   dependencies:
     amd-name-resolver "^1.2.0"
     babel-plugin-transform-es2015-modules-amd "^6.24.0"
@@ -2339,7 +2339,7 @@ ember-qunit@^3.3.2:
 
 "ember-resolver@github:ember-cli/ember-resolver#expandLocalLookup":
   version "4.5.0"
-  resolved "https://codeload.github.com/ember-cli/ember-resolver/tar.gz/54ff21650464bcca54c70afb53f419aacae3aebf"
+  resolved "https://codeload.github.com/ember-cli/ember-resolver/tar.gz/338680aaf1db1710fc89b88fdf0d072c30292465"
   dependencies:
     "@glimmer/resolver" "^0.4.1"
     babel-plugin-debug-macros "^0.1.10"
@@ -3765,8 +3765,8 @@ js-tokens@^3.0.0, js-tokens@^3.0.2:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
 
 js-yaml@^3.2.5, js-yaml@^3.2.7, js-yaml@^3.6.1, js-yaml@^3.9.1:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.10.0.tgz#2e78441646bd4682e963f22b6e92823c309c62dc"
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.11.0.tgz#597c1a8bd57152f26d622ce4117851a51f5ebaef"
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
@@ -4557,7 +4557,7 @@ ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
 
-"mu-first-post@github:iezer/mu-first-post":
+"mu-first-post@github:iezer/mu-first-post#master":
   version "0.0.0"
   resolved "https://codeload.github.com/iezer/mu-first-post/tar.gz/5145065e53b96a5fce6cc8a840d7080ce87c199c"
   dependencies:

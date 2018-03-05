@@ -19,7 +19,7 @@
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
-    "ember-cli": "github:ember-cli/ember-cli#mu-addons",
+    "ember-cli": "github:ember-cli/ember-cli#master",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.2.1",
@@ -37,7 +37,7 @@
     "ember-welcome-page": "^3.0.0",
     "eslint-plugin-ember": "^5.0.0",
     "loader.js": "^4.2.3",
-    "mu-first-post": "github:iezer/mu-first-post"
+    "mu-first-post": "github:iezer/mu-first-post#master"
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
