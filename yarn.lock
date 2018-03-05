@@ -2337,9 +2337,9 @@ ember-qunit@^3.3.2:
     ember-cli-test-loader "^2.2.0"
     qunit "^2.5.0"
 
-"ember-resolver@github:ember-cli/ember-resolver#expandLocalLookup":
+"ember-resolver@github:ember-cli/ember-resolver#master":
   version "4.5.0"
-  resolved "https://codeload.github.com/ember-cli/ember-resolver/tar.gz/338680aaf1db1710fc89b88fdf0d072c30292465"
+  resolved "https://codeload.github.com/ember-cli/ember-resolver/tar.gz/0d3a85d48953665ff8e9e0a6471f28b8aa58097d"
   dependencies:
     "@glimmer/resolver" "^0.4.1"
     babel-plugin-debug-macros "^0.1.10"
